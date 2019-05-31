@@ -1,0 +1,6 @@
+com\flexicore\translation\service\TranslationService.class
+com\flexicore\translation\request\TranslationFiltering.class
+com\flexicore\translation\request\CreateTranslation.class
+com\flexicore\translation\rest\TranslationRESTService.class
+com\flexicore\translation\request\UpdateTranslation.class
+com\flexicore\translation\data\TranslationRepository.class
