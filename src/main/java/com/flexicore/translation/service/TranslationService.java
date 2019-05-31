@@ -13,8 +13,9 @@ import com.flexicore.translation.request.UpdateTranslation;
 
 import javax.inject.Inject;
 import javax.ws.rs.BadRequestException;
-import java.util.List;
+import java.util.*;
 import java.util.logging.Logger;
+import java.util.stream.Collectors;
 
 @PluginInfo(version = 1)
 
@@ -113,5 +114,15 @@ public class TranslationService implements ServicePlugin {
 
     public void validateUpdate(UpdateTranslation updateTranslation, SecurityContext securityContext) {
         populate(updateTranslation,securityContext);
+    }
+
+    public void validate(TranslationFiltering translationFiltering, SecurityContext securityContext) {
+        Set<String> translatedIds=translationFiltering.getTranslatedIds();
+        Map<String,Baseclass> baseclassMap=translatedIds.isEmpty()?new HashMap<>():translationRepository.listByIds(Translation.class,translatedIds,securityContext).parallelStream().collect(Collectors.toMap(f->f.getId(),f->f));
+        translatedIds.removeAll(baseclassMap.keySet());
+        if(!translatedIds.isEmpty()){
+            throw new BadRequestException("No Baseclasses with ids "+translatedIds);
+        }
+        translationFiltering.setTranslated(new ArrayList<>(baseclassMap.values()));
     }
 }

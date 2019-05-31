@@ -49,6 +49,7 @@ public class TranslationRESTService implements RestServicePlugin {
     public PaginationResponse<Translation> getAllTranslations(
             @HeaderParam("authenticationKey") String authenticationKey,
             TranslationFiltering translationFiltering, @Context SecurityContext securityContext) {
+        service.validate(translationFiltering,securityContext);
         return service.getAllTranslations(translationFiltering, securityContext);
 
     }
