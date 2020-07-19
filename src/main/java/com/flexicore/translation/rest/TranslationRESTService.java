@@ -7,9 +7,11 @@ import com.flexicore.data.jsoncontainers.PaginationResponse;
 import com.flexicore.interfaces.RestServicePlugin;
 import com.flexicore.security.SecurityContext;
 import com.flexicore.translation.model.Translation;
+import com.flexicore.translation.request.ImportI18NRequest;
 import com.flexicore.translation.request.TranslationCreate;
 import com.flexicore.translation.request.TranslationFiltering;
 import com.flexicore.translation.request.TranslationUpdate;
+import com.flexicore.translation.response.ImportI18NResponse;
 import com.flexicore.translation.service.TranslationService;
 import io.swagger.v3.oas.annotations.OpenAPIDefinition;
 import io.swagger.v3.oas.annotations.Operation;
@@ -18,6 +20,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import javax.interceptor.Interceptors;
 import javax.ws.rs.*;
 import javax.ws.rs.core.Context;
+import java.util.Collections;
 import java.util.Map;
 import org.pf4j.Extension;
 import org.springframework.stereotype.Component;
@@ -70,19 +73,33 @@ public class TranslationRESTService implements RestServicePlugin {
 
 	@GET
 	@Produces("application/json")
-	@Operation(summary = "generateI18nJsonAll", description = "returns all Translations")
-	@Path("generateI18nJsonAll")
+	@Operation(summary = "generateI18nJsonAll", description = "returns translations in i18n format")
+	@Path("generateI18nJsonAll/{langCode}")
 	public Map<String, Object> generateI18nJsonAll(
 			@HeaderParam("authenticationKey") String authenticationKey,
+			@PathParam("langCode") String langCode,
 			@Context SecurityContext securityContext) {
-		return service.generateI18nJson(new TranslationFiltering(),
-				securityContext);
+		TranslationFiltering translationFiltering = new TranslationFiltering().setLanguageCodes(Collections.singleton(langCode));
+		return service.generateI18nJson(translationFiltering, securityContext);
+
+	}
+
+	@POST
+	@Produces("application/json")
+	@Operation(summary = "importI18n", description = "imports i18n to system transalations")
+	@Path("importI18n")
+	public ImportI18NResponse importI18n(
+			@HeaderParam("authenticationKey") String authenticationKey,
+			ImportI18NRequest importI18NRequest,
+			@Context SecurityContext securityContext) {
+		service.validate(importI18NRequest,securityContext);
+		return service.importI18n(importI18NRequest, securityContext);
 
 	}
 
 	@PUT
 	@Produces("application/json")
-	@Operation(summary = "updateTranslation", description = "Updates Dashbaord")
+	@Operation(summary = "updateTranslation", description = "Updates translation")
 	@Path("updateTranslation")
 	public Translation updateTranslation(
 			@HeaderParam("authenticationKey") String authenticationKey,
@@ -104,7 +121,7 @@ public class TranslationRESTService implements RestServicePlugin {
 
 	@POST
 	@Produces("application/json")
-	@Operation(summary = "createTranslation", description = "Creates Ui Field ")
+	@Operation(summary = "createTranslation", description = "Creates Translation")
 	@Path("createTranslation")
 	public Translation createTranslation(
 			@HeaderParam("authenticationKey") String authenticationKey,
