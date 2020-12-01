@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -20,11 +23,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="23f8eba6-f6b3-40ce-8fcf-a2839ac4529a" name="Default Changelist" comment="init">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flexicore/translation/request/ImportI18NRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/flexicore/translation/response/ImportI18NResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flexicore/translation/rest/TranslationRESTService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flexicore/translation/rest/TranslationRESTService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/flexicore/translation/service/TranslationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/flexicore/translation/service/TranslationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,6 +49,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="JupyterTrust" id="aa2b198e-fb89-4a64-9ab3-7250735e77e6" />
   <component name="ProjectId" id="1UYgett77PxN3CMZARM9C3QLRSF" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
