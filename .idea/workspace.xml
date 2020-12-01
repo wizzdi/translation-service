@@ -22,10 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23f8eba6-f6b3-40ce-8fcf-a2839ac4529a" name="Default Changelist" comment="init">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="23f8eba6-f6b3-40ce-8fcf-a2839ac4529a" name="Default Changelist" comment="prepare for release" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,7 +78,35 @@
       <recent name="com.flexicore.translation.request" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Maven.translation-service [clean...]">
+    <configuration name="translation-service [clean...]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="release:prepare" />
+                <option value="release:perform" />
+                <option value="-Dresume=false" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration name="translation-service [install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -107,6 +132,10 @@
       </MavenSettings>
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Maven.translation-service [install]" />
+      <item itemvalue="Maven.translation-service [clean...]" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -146,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1594551947346</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="prepare for release">
+      <created>1606832022296</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1606832022296</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -166,46 +202,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="prepare for release" />
+    <option name="LAST_COMMIT_MESSAGE" value="prepare for release" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser" timestamp="1595170310959">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606832045168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="765" y="204" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1595170310959" />
-    <state x="592" y="218" key="FileChooserDialogImpl" timestamp="1594905142856">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="592" y="218" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1594905142856" />
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1594551964961" />
-    <state width="1921" height="288" key="GridCell.Tab.0.bottom" timestamp="1594551965894">
+    <state x="414" y="175" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606832045168" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1606832023617">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="288" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1594551965894" />
-    <state width="1921" height="288" key="GridCell.Tab.0.center" timestamp="1594551965894">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606832023617" />
+    <state x="742" y="421" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1606832010146">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1921" height="288" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1594551965894" />
-    <state width="1921" height="288" key="GridCell.Tab.0.left" timestamp="1594551965894">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1921" height="288" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1594551965894" />
-    <state width="1921" height="288" key="GridCell.Tab.0.right" timestamp="1594551965894">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1921" height="288" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1594551965894" />
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2" timestamp="1594551948607">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="240" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1594551948607" />
-    <state x="667" y="253" width="585" height="592" key="find.popup" timestamp="1594551890073">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="253" width="585" height="592" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1594551890073" />
-    <state x="666" y="277" key="refactoring.ChangeSignatureDialog" timestamp="1595169039900">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="666" y="277" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1595169039900" />
+    <state x="742" y="421" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606832010146" />
   </component>
   <component name="masterDetails">
     <states>
